@@ -2885,6 +2885,7 @@
 		#define S 11
 		#error "BUG"
 	#endif
+	// NOTE: How to end up here?
 	#if S == 11
 		#undef S
 		#define S 12
@@ -4154,198 +4155,19 @@
 	#if S == 34
 		#undef S
 		#define S 35
-		#undef l0
-		#ifdef B0
-			#define l0 1
-		#else
-			#define l0 0
-		#endif
-		#undef l1
-		#ifdef B1
-			#define l1 1
-		#else
-			#define l1 0
-		#endif
-		#undef l2
-		#ifdef B2
-			#define l2 1
-		#else
-			#define l2 0
-		#endif
-		#undef l3
-		#ifdef B3
-			#define l3 1
-		#else
-			#define l3 0
-		#endif
-		#undef l4
-		#ifdef B4
-			#define l4 1
-		#else
-			#define l4 0
-		#endif
-		#undef l5
-		#ifdef B5
-			#define l5 1
-		#else
-			#define l5 0
-		#endif
-		#undef l6
-		#ifdef B6
-			#define l6 1
-		#else
-			#define l6 0
-		#endif
-		#undef l7
-		#ifdef B7
-			#define l7 1
-		#else
-			#define l7 0
-		#endif
-		#if LD(l, 0)
-			#define A0
-		#else
-			#undef A0
-		#endif
-		#if LD(l, 1)
-			#define A1
-		#else
-			#undef A1
-		#endif
-		#if LD(l, 2)
-			#define A2
-		#else
-			#undef A2
-		#endif
-		#if LD(l, 3)
-			#define A3
-		#else
-			#undef A3
-		#endif
-		#if LD(l, 4)
-			#define A4
-		#else
-			#undef A4
-		#endif
-		#if LD(l, 5)
-			#define A5
-		#else
-			#undef A5
-		#endif
-		#if LD(l, 6)
-			#define A6
-		#else
-			#undef A6
-		#endif
-		#if LD(l, 7)
-			#define A7
-		#else
-			#undef A7
-		#endif
+		// NOTE: A = LD(ROM_B)
+
 	#endif
 	#if S == 35
 		#undef S
 		#define S 36
-		#undef l0
-		#ifdef I0
-			#define l0 1
-		#else
-			#define l0 0
-		#endif
-		#undef l1
-		#ifdef I1
-			#define l1 1
-		#else
-			#define l1 0
-		#endif
-		#undef l2
-		#ifdef I2
-			#define l2 1
-		#else
-			#define l2 0
-		#endif
-		#undef l3
-		#ifdef I3
-			#define l3 1
-		#else
-			#define l3 0
-		#endif
-		#undef l4
-		#ifdef I4
-			#define l4 1
-		#else
-			#define l4 0
-		#endif
-		#undef l5
-		#ifdef I5
-			#define l5 1
-		#else
-			#define l5 0
-		#endif
-		#undef l6
-		#ifdef I6
-			#define l6 1
-		#else
-			#define l6 0
-		#endif
-		#undef l7
-		#ifdef I7
-			#define l7 1
-		#else
-			#define l7 0
-		#endif
-		#if LD(l, 0)
-			#define B0
-		#else
-			#undef B0
-		#endif
-		#if LD(l, 1)
-			#define B1
-		#else
-			#undef B1
-		#endif
-		#if LD(l, 2)
-			#define B2
-		#else
-			#undef B2
-		#endif
-		#if LD(l, 3)
-			#define B3
-		#else
-			#undef B3
-		#endif
-		#if LD(l, 4)
-			#define B4
-		#else
-			#undef B4
-		#endif
-		#if LD(l, 5)
-			#define B5
-		#else
-			#undef B5
-		#endif
-		#if LD(l, 6)
-			#define B6
-		#else
-			#undef B6
-		#endif
-		#if LD(l, 7)
-			#define B7
-		#else
-			#undef B7
-		#endif
+		// NOTE: B = LD(ROM_I)
+
 	#endif
 	#if S == 36
 		#undef S
 		#define S 37
-		#define R0
-		#undef R1
-		#undef R2
-		#undef R3
-		#undef R4
-		#undef R5
-		#undef R6
-		#undef R7
+		// NOTE: R := 1000000
 	#endif
 	#if S == 37
 		#undef S
@@ -4356,46 +4178,7 @@
 	#if S == 38
 		#undef S
 		#define S 39
-		#ifdef M0
-			#define O0
-		#else
-			#undef O0
-		#endif
-		#ifdef M1
-			#define O1
-		#else
-			#undef O1
-		#endif
-		#ifdef M2
-			#define O2
-		#else
-			#undef O2
-		#endif
-		#ifdef M3
-			#define O3
-		#else
-			#undef O3
-		#endif
-		#ifdef M4
-			#define O4
-		#else
-			#undef O4
-		#endif
-		#ifdef M5
-			#define O5
-		#else
-			#undef O5
-		#endif
-		#ifdef M6
-			#define O6
-		#else
-			#undef O6
-		#endif
-		#ifdef M7
-			#define O7
-		#else
-			#undef O7
-		#endif
+		//NOTE: O := M
 	#endif
 	#if S == 39
 		#undef S
@@ -4605,90 +4388,12 @@
 	#if S == 40
 		#undef S
 		#define S 41
-		#ifdef N0
-			#define M0
-		#else
-			#undef M0
-		#endif
-		#ifdef N1
-			#define M1
-		#else
-			#undef M1
-		#endif
-		#ifdef N2
-			#define M2
-		#else
-			#undef M2
-		#endif
-		#ifdef N3
-			#define M3
-		#else
-			#undef M3
-		#endif
-		#ifdef N4
-			#define M4
-		#else
-			#undef M4
-		#endif
-		#ifdef N5
-			#define M5
-		#else
-			#undef M5
-		#endif
-		#ifdef N6
-			#define M6
-		#else
-			#undef M6
-		#endif
-		#ifdef N7
-			#define M7
-		#else
-			#undef M7
-		#endif
+		//NOTE: M := N
 	#endif
 	#if S == 41
 		#undef S
 		#define S 42
-		#ifdef O0
-			#define N0
-		#else
-			#undef N0
-		#endif
-		#ifdef O1
-			#define N1
-		#else
-			#undef N1
-		#endif
-		#ifdef O2
-			#define N2
-		#else
-			#undef N2
-		#endif
-		#ifdef O3
-			#define N3
-		#else
-			#undef N3
-		#endif
-		#ifdef O4
-			#define N4
-		#else
-			#undef N4
-		#endif
-		#ifdef O5
-			#define N5
-		#else
-			#undef N5
-		#endif
-		#ifdef O6
-			#define N6
-		#else
-			#undef N6
-		#endif
-		#ifdef O7
-			#define N7
-		#else
-			#undef N7
-		#endif
+		// NOTE: N := O
 	#endif
 	#if S == 42
 		#undef S
@@ -5112,97 +4817,12 @@
 			#endif
 		#endif
 	#endif
+
 	#if S == 45
 		#undef S
 		#define S 46
-		#undef l0
-		#ifdef B0
-			#define l0 1
-		#else
-			#define l0 0
-		#endif
-		#undef l1
-		#ifdef B1
-			#define l1 1
-		#else
-			#define l1 0
-		#endif
-		#undef l2
-		#ifdef B2
-			#define l2 1
-		#else
-			#define l2 0
-		#endif
-		#undef l3
-		#ifdef B3
-			#define l3 1
-		#else
-			#define l3 0
-		#endif
-		#undef l4
-		#ifdef B4
-			#define l4 1
-		#else
-			#define l4 0
-		#endif
-		#undef l5
-		#ifdef B5
-			#define l5 1
-		#else
-			#define l5 0
-		#endif
-		#undef l6
-		#ifdef B6
-			#define l6 1
-		#else
-			#define l6 0
-		#endif
-		#undef l7
-		#ifdef B7
-			#define l7 1
-		#else
-			#define l7 0
-		#endif
-		#if LD(l, 0)
-			#define C0
-		#else
-			#undef C0
-		#endif
-		#if LD(l, 1)
-			#define C1
-		#else
-			#undef C1
-		#endif
-		#if LD(l, 2)
-			#define C2
-		#else
-			#undef C2
-		#endif
-		#if LD(l, 3)
-			#define C3
-		#else
-			#undef C3
-		#endif
-		#if LD(l, 4)
-			#define C4
-		#else
-			#undef C4
-		#endif
-		#if LD(l, 5)
-			#define C5
-		#else
-			#undef C5
-		#endif
-		#if LD(l, 6)
-			#define C6
-		#else
-			#undef C6
-		#endif
-		#if LD(l, 7)
-			#define C7
-		#else
-			#undef C7
-		#endif
+		// NOTE: C = LD(ROM_B)
+
 	#endif
 	#if S == 46
 		#undef S
@@ -5686,97 +5306,12 @@
 			#endif
 		#endif
 	#endif
+
 	#if S == 50
 		#undef S
 		#define S 51
-		#undef l0
-		#ifdef B0
-			#define l0 1
-		#else
-			#define l0 0
-		#endif
-		#undef l1
-		#ifdef B1
-			#define l1 1
-		#else
-			#define l1 0
-		#endif
-		#undef l2
-		#ifdef B2
-			#define l2 1
-		#else
-			#define l2 0
-		#endif
-		#undef l3
-		#ifdef B3
-			#define l3 1
-		#else
-			#define l3 0
-		#endif
-		#undef l4
-		#ifdef B4
-			#define l4 1
-		#else
-			#define l4 0
-		#endif
-		#undef l5
-		#ifdef B5
-			#define l5 1
-		#else
-			#define l5 0
-		#endif
-		#undef l6
-		#ifdef B6
-			#define l6 1
-		#else
-			#define l6 0
-		#endif
-		#undef l7
-		#ifdef B7
-			#define l7 1
-		#else
-			#define l7 0
-		#endif
-		#if LD(l, 0)
-			#define A0
-		#else
-			#undef A0
-		#endif
-		#if LD(l, 1)
-			#define A1
-		#else
-			#undef A1
-		#endif
-		#if LD(l, 2)
-			#define A2
-		#else
-			#undef A2
-		#endif
-		#if LD(l, 3)
-			#define A3
-		#else
-			#undef A3
-		#endif
-		#if LD(l, 4)
-			#define A4
-		#else
-			#undef A4
-		#endif
-		#if LD(l, 5)
-			#define A5
-		#else
-			#undef A5
-		#endif
-		#if LD(l, 6)
-			#define A6
-		#else
-			#undef A6
-		#endif
-		#if LD(l, 7)
-			#define A7
-		#else
-			#undef A7
-		#endif
+		// NOTE: A = LD(ROM_B)
+
 	#endif
 	#if S == 51
 		#undef S

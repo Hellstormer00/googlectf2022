@@ -41,11 +41,30 @@ If __INCLUDE_LEVEL__ > 12:
     if S == 30:
         Buchstaben werden definiert
 
-    .. I dont know yet
+    if S == 34:
+        A = LD(ROM_B)
 
     if S == 35:
-        Checking if some ROM is defined by LD
+        B = LD(ROM_I)
+
+    if S == 45:
+        C = LD(ROM_B)
+
+    ...
+
+    if S == 50:
+        A = LD(ROM_B)
 
 
 Else:
     include "cpp.c"
+
+## Where is LD used?
+## Where is l used?
+
+Sections: 50, 45, 35, 34
+
+34 defines A0-A7
+35 defines B0-B7
+45 defines C0-C7
+50 defines A0-A7
